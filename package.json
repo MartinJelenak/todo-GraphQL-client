@@ -2,20 +2,27 @@
   "name": "notes-frontend",
   "version": "0.1.0",
   "private": true,
+  "plugins": [
+    "relay"
+  ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-relay": "^0.0.0-experimental-4c4107dd",
     "react-scripts": "4.0.3",
+    "relay-config": "^10.1.3",
+    "relay-runtime": "^10.1.3",
     "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "relay": "relay-compiler --src ./src --schema ./data/schema.graphql --extensions js jsx"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +41,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-relay": "^10.1.3",
+    "graphql": "^15.5.0",
+    "relay-compiler": "^10.1.3"
   }
 }
